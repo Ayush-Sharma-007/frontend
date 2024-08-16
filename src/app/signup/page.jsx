@@ -46,13 +46,12 @@ const Signup = () => {
       axios.post("http://localhost:5000/user/add", values)
       .then((response) => {
         console.log(response.status);
-        resetForm()
-        toast.success('User registered successfully')
+        resetForm();
+        toast.success('User registered successfully');
       }).catch((err) => {
         console.log(err);
         console.log(err.response?.data);
-        setSubmitting(false)
-        toast.error('Something went wrong')
+        setSubmitting(err?.ersponse?.data?.message);
       });
 
     },
