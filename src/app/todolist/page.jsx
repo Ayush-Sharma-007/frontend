@@ -4,9 +4,7 @@ import React, {useState} from 'react'
 const Todolist = () => {
 
     const [ count, setCount ] = useState(0);
-    const [TaskList, setTaskList] = useState([
-        
-    ]);
+    const [TaskList, setTaskList] = useState([]);
 
     const addTask= (e) => {
         if (e.code === 'Enter'){
